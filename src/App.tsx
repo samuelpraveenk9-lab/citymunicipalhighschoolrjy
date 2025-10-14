@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { FaChalkboardTeacher, FaBook, FaFlask } from "react-icons/fa";
 import "./App.css";
