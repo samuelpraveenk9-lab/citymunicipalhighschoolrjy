@@ -1,172 +1,207 @@
-/* App.css */
-
-/* Colors & fonts */
-:root {
-  --primary-color: #1e40af;
-  --secondary-color: #60a5fa;
-  --accent-color: #fbbf24;
-  --text-color: #1f2937;
-  --bg-color: #f9fafb;
-  --card-bg: rgba(255, 255, 255, 0.8);
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
+/* 🌐 Global Reset */
+* {
   margin: 0;
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
-nav {
-  position: fixed;
+/* 🌈 Root Theme Colors */
+:root {
+  --primary: #004aad; /* CMCH blue */
+  --secondary: #f7b500; /* Gold accent */
+  --light-bg: #f9fbff;
+  --text-dark: #222;
+  --text-light: #fff;
+}
+
+/* 🏫 Page Layout */
+body, html, #root {
   width: 100%;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  z-index: 50;
+  min-height: 100%;
+  background-color: var(--light-bg);
+}
+
+/* 🧭 Navbar */
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: var(--primary);
+  color: var(--text-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+nav h1 {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  font-weight: 700;
 }
 
 nav ul {
   display: flex;
+  gap: 1.5rem;
   list-style: none;
-  gap: 20px;
-  padding: 0;
-  margin: 0;
 }
 
-nav li {
-  cursor: pointer;
-  font-weight: bold;
-  color: var(--primary-color);
+nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-nav li:hover {
-  color: var(--accent-color);
+nav a:hover {
+  color: var(--secondary);
 }
 
-/* Hero */
+/* 🖼️ Hero Section */
 .hero {
-  height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: white;
-  text-align: center;
-  position: relative;
-}
-
-.hero img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.3;
-  top: 0;
-  left: 0;
-}
-
-.hero-content button {
-  background: var(--accent-color);
-  color: var(--primary-color);
-  border: none;
-  padding: 12px 24px;
-  border-radius: 9999px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.hero-content button:hover {
-  transform: scale(1.05);
-}
-
-/* Sections */
-section {
-  padding: 80px 20px;
-}
-
-h3 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-p {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* Cards */
-.cards {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
-  margin-top: 40px;
+  text-align: center;
+  flex-direction: column;
+  height: 90vh;
+  background: linear-gradient(to right, rgba(0, 74, 173, 0.85), rgba(0, 74, 173, 0.55)), 
+              url("./assets/school-hero.jpg") center/cover no-repeat;
+  color: var(--text-light);
+  padding: 2rem;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  animation: fadeInUp 1.2s ease;
+}
+
+.hero p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  max-width: 700px;
+  animation: fadeInUp 1.8s ease;
+}
+
+.hero button {
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  background-color: var(--secondary);
+  color: var(--text-dark);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.hero button:hover {
+  transform: translateY(-3px);
+  background-color: #ffcc33;
+}
+
+/* 📘 About Section */
+section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+section h3 {
+  font-size: 2.2rem;
+  color: var(--primary);
+  margin-bottom: 1.2rem;
+}
+
+section p {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  line-height: 1.8rem;
+}
+
+/* 🧑‍🏫 Teachers / Students Section */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
 }
 
 .card {
-  background: var(--card-bg);
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  text-align: center;
-  width: 250px;
-  transition: transform 0.3s;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
-.card-icon {
-  color: var(--primary-color);
-  margin-bottom: 15px;
+.card h4 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
 }
 
-/* Contact Form */
-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  margin: 0 auto;
-  gap: 15px;
-}
-
-input, textarea {
-  padding: 12px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-}
-
-input:focus, textarea:focus {
-  outline: none;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 2px var(--secondary-color);
-}
-
-form button {
-  background: var(--primary-color);
-  color: white;
-  font-weight: bold;
-  padding: 12px;
-  border: none;
-  border-radius: 9999px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-form button:hover {
-  background: var(--secondary-color);
-}
-
-/* Footer */
+/* 🧩 Footer */
 footer {
+  background-color: var(--primary);
+  color: var(--text-light);
   text-align: center;
-  padding: 30px 0;
-  background: var(--primary-color);
-  color: white;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  margin-top: 4rem;
+}
+
+footer a {
+  color: var(--secondary);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ✨ Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 1.5rem;
+  }
 }
