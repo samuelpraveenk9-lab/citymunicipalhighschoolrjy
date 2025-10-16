@@ -27,7 +27,7 @@ function App() {
       {/* Navbar */}
       <nav className="p-4 flex justify-between max-w-7xl mx-auto">
         <h1 className="font-bold text-xl text-blue-900">
-          City Municipal Corporation High School, Rajahmahendravaram
+          City Municipal Corporation High School
         </h1>
         <ul>
           {["Home", "About", "Features", "Gallery", "Events", "Contact"].map(
@@ -40,7 +40,7 @@ function App() {
         </ul>
       </nav>
 
-      {/* Hero Section with HM Photo + Education */}
+      {/* Hero */}
       <section className="hero">
         <img
           src="/assets/hm-photo.jpg"
@@ -74,8 +74,6 @@ function App() {
           <p style={{ fontSize: "1.25rem", marginBottom: "1rem" }}>
             Excellence in Education, Innovation, and Growth
           </p>
-
-          {/* HM Education */}
           <div
             style={{
               marginBottom: "1.5rem",
@@ -83,10 +81,9 @@ function App() {
               color: "#1e40af",
             }}
           >
-            <strong>Headmaster:</strong> Sri P. Durga Prasad Garu<br />
+            <strong>Headmaster:</strong> Sri P. Durga Prasad Garu <br />
             <strong>Education:</strong> M.Sc, M.Phil, B.Ed
           </div>
-
           <button
             style={{
               backgroundColor: "#fbbf24",
@@ -103,34 +100,23 @@ function App() {
         </motion.div>
       </section>
 
-      {/* About HM Card */}
-      <section
-        className="hm-about-card"
-        style={{ textAlign: "center", padding: "2rem 1rem" }}
-      >
+      {/* About HM */}
+      <section className="hm-about-card" style={{ textAlign: "center", padding: "2rem 1rem" }}>
         <img
           src="/assets/hm-photo.jpg"
           alt="Headmaster"
-          style={{
-            width: "200px",
-            borderRadius: "50%",
-            marginBottom: "1rem",
-          }}
+          style={{ width: "200px", borderRadius: "50%", marginBottom: "1rem" }}
         />
-        <h3> Sri P. Durga Prasad Garu </h3>
+        <h3>Sri P. Durga Prasad Garu</h3>
         <p>M.Sc, M.Phil, B.Ed</p>
-        <p>
-          Our esteemed Headmaster guiding students with excellence and
-          integrity.
-        </p>
+        <p>Our esteemed Headmaster guiding students with excellence and integrity.</p>
       </section>
 
       {/* About School */}
       <section id="about" className="section">
         <h3>About CMCH School</h3>
         <p>
-          CMCH School is dedicated to nurturing young minds with modern
-          education, innovative teaching methods, and holistic development.
+          CMCH School is dedicated to nurturing young minds with modern education, innovative teaching methods, and holistic development.
         </p>
       </section>
 
@@ -139,11 +125,7 @@ function App() {
         <h3>Our Highlights</h3>
         <div className="cards">
           {features.map((f, idx) => (
-            <motion.div
-              key={idx}
-              whileHover={{ scale: 1.05 }}
-              className="card"
-            >
+            <motion.div key={idx} whileHover={{ scale: 1.05 }} className="card">
               <div className="card-icon">{f.icon}</div>
               <h4 className="font-bold text-xl mb-2">{f.title}</h4>
               <p>{f.description}</p>
@@ -157,46 +139,36 @@ function App() {
         <h3>Gallery</h3>
         <div className="cards">
           {[
-            {
-              src: "https://source.unsplash.com/400x300/?school,students",
-              caption: "Morning Assembly",
-            },
-            {
-              src: "https://source.unsplash.com/400x300/?school,classroom",
-              caption: "Smart Classroom",
-            },
-            {
-              src: "https://source.unsplash.com/400x300/?school,sports",
-              caption: "Sports Meet",
-            },
-            {
-              src: "https://source.unsplash.com/400x300/?school,science",
-              caption: "Science Fair",
-            },
-            {
-              src: "https://source.unsplash.com/400x300/?school,celebration",
-              caption: "Cultural Day",
-            },
-            {
-              src: "https://source.unsplash.com/400x300/?school,library",
-              caption: "Library Learning",
-            },
+            { src: "/assets/Gandhiji-Jayanthi.jpg", caption: "Gandhiji Jayanthi" },
+            { src: "/assets/NMMS-Class.jpg", caption: "NMMS Class" },
+            { src: "/assets/Remembring-Gandhiji.jpg", caption: "Remembering Gandhiji" },
+            { src: "/assets/SS--Rally-Portrait.jpg", caption: "SS Rally (Portrait)" },
+            { src: "/assets/SS-Rally-Landscape.jpg", caption: "SS Rally (Landscape)" },
+            { src: "/assets/Saraswathi-Puja.jpg", caption: "Saraswathi Puja" },
+            { src: "/assets/School-photo.jpg", caption: "School Photo" },
+            { src: "/assets/Telugu-DAY1.jpg", caption: "Telugu Day 1" },
+            { src: "/assets/selected-for-karate1.jpg", caption: "Karate Achievement" },
+            { src: "/assets/hm-photo.jpg", caption: "Headmaster" },
           ].map((photo, idx) => (
-            <motion.div
-              key={idx}
-              whileHover={{ scale: 1.05 }}
-              className="card"
-            >
+            <motion.div key={idx} whileHover={{ scale: 1.05 }} className="card">
               <img
                 src={photo.src}
                 alt={photo.caption}
                 style={{ width: "100%", borderRadius: "8px" }}
               />
-              <p style={{ marginTop: "0.5rem", fontWeight: "500" }}>
-                {photo.caption}
-              </p>
+              <p style={{ marginTop: "0.5rem", fontWeight: "500" }}>{photo.caption}</p>
             </motion.div>
           ))}
+
+          {/* NMMS Video */}
+          <motion.div whileHover={{ scale: 1.05 }} className="card">
+            <video
+              src="/assets/NMMS-Class-video.mp4"
+              controls
+              style={{ width: "100%", borderRadius: "8px" }}
+            />
+            <p style={{ marginTop: "0.5rem", fontWeight: "500" }}>NMMS Class Video</p>
+          </motion.div>
         </div>
       </section>
 
@@ -205,18 +177,9 @@ function App() {
         <h3>Upcoming Events</h3>
         <div className="cards">
           {[
-            {
-              title: "Independence Day Celebration",
-              description: "Flag hoisting & cultural programs",
-            },
-            {
-              title: "Science Exhibition",
-              description: "Innovative student projects on display",
-            },
-            {
-              title: "Annual Sports Meet",
-              description: "Track events & team games",
-            },
+            { title: "Independence Day Celebration", description: "Flag hoisting & cultural programs" },
+            { title: "Science Exhibition", description: "Innovative student projects on display" },
+            { title: "Annual Sports Meet", description: "Track events & team games" },
           ].map((e, idx) => (
             <motion.div key={idx} whileHover={{ scale: 1.05 }} className="card">
               <h4 className="font-bold text-xl mb-2">{e.title}</h4>
@@ -238,9 +201,7 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="footer">
-        © {new Date().getFullYear()} CMCH School. All rights reserved.
-      </footer>
+      <footer className="footer">© {new Date().getFullYear()} CMCH School. All rights reserved.</footer>
     </div>
   );
 }
