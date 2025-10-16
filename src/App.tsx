@@ -27,7 +27,7 @@ function App() {
       {/* Navbar */}
       <nav className="p-4 flex justify-between max-w-7xl mx-auto">
         <h1 className="font-bold text-xl text-blue-900">
-          City Municipal Corporation High School
+          City Municipal Corporation High School, Rajahmahendravaram
         </h1>
         <ul>
           {["Home", "About", "Features", "Gallery", "Events", "Contact"].map(
@@ -83,7 +83,7 @@ function App() {
               color: "#1e40af",
             }}
           >
-            <strong>Headmaster:</strong> Dr. John Doe <br />
+            <strong>Headmaster:</strong> Sri P. Durga Prasad Garu<br />
             <strong>Education:</strong> M.Sc, M.Phil, B.Ed
           </div>
 
@@ -117,7 +117,7 @@ function App() {
             marginBottom: "1rem",
           }}
         />
-        <h3>Dr. John Doe</h3>
+        <h3> Sri P. Durga Prasad Garu </h3>
         <p>M.Sc, M.Phil, B.Ed</p>
         <p>
           Our esteemed Headmaster guiding students with excellence and
