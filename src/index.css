@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -65,4 +66,13 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+=======
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f7f9fc;
+}
+a {
+  text-decoration: none;
+>>>>>>> 3e3e914 (Add new project with Home, Gallery, Events, and assets)
 }

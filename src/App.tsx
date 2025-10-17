@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { motion } from "framer-motion";
 import { FaChalkboardTeacher, FaBook, FaFlask } from "react-icons/fa";
 import "./App.css";
@@ -203,6 +204,26 @@ function App() {
       {/* Footer */}
       <footer className="footer">© {new Date().getFullYear()} CMCH School. All rights reserved.</footer>
     </div>
+=======
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar.tsx";
+import Footer from "./components/Footer.tsx";
+import Home from "./pages/Home.tsx";
+import Gallery from "./pages/Gallery.tsx";
+import Events from "./pages/Events.tsx";
+
+function App() {
+  return (
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/events" element={<Events />} />
+      </Routes>
+      <Footer />
+    </>
+>>>>>>> 3e3e914 (Add new project with Home, Gallery, Events, and assets)
   );
 }
 
