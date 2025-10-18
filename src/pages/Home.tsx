@@ -1,6 +1,7 @@
+import React from "react";
 import hmPhoto from "../assets/hm-photo.jpg";
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
     <div>
       {/* Hero Section */}
@@ -14,23 +15,26 @@ export default function Home() {
         }}
       >
         <h1
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          style={{ fontSize: "3rem", fontWeight: "bold", color: "#1e3a8a", marginBottom: "20px" }}
+          style={{
+            fontSize: "3rem",
+            fontWeight: "bold",
+            color: "#1e3a8a",
+            marginBottom: "20px",
+          }}
         >
           Welcome to CMCH School
         </h1>
         <p
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          style={{ fontSize: "1.25rem", maxWidth: "700px", margin: "0 auto", marginBottom: "30px" }}
+          style={{
+            fontSize: "1.25rem",
+            maxWidth: "700px",
+            margin: "0 auto",
+            marginBottom: "30px",
+          }}
         >
           Excellence in Education, Innovation, and Holistic Development.
         </p>
         <button
-          whileHover={{ scale: 1.05 }}
           style={{
             backgroundColor: "#fbbf24",
             color: "#1e40af",
@@ -93,7 +97,6 @@ export default function Home() {
           ].map((f, idx) => (
             <div
               key={idx}
-              whileHover={{ scale: 1.05 }}
               style={{
                 background: "#fff",
                 borderRadius: "12px",
@@ -121,9 +124,8 @@ export default function Home() {
           }}
         >
           {[1, 2, 3].map((e) => (
-            <motion.div
+            <div
               key={e}
-              whileHover={{ scale: 1.05 }}
               style={{
                 background: "#fff",
                 borderRadius: "12px",
@@ -142,7 +144,10 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" style={{ padding: "50px 20px", textAlign: "center" }}>
         <h2 style={{ fontSize: "2rem", marginBottom: "30px" }}>Contact Us</h2>
-        <form style={{ maxWidth: "500px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "15px" }}>
+        <form
+          onSubmit={(e) => e.preventDefault()}
+          style={{ maxWidth: "500px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "15px" }}
+        >
           <input type="text" placeholder="Name" style={{ padding: "10px", borderRadius: "6px", border: "1px solid #ccc" }} />
           <input type="email" placeholder="Email" style={{ padding: "10px", borderRadius: "6px", border: "1px solid #ccc" }} />
           <textarea placeholder="Message" rows={4} style={{ padding: "10px", borderRadius: "6px", border: "1px solid #ccc" }}></textarea>
@@ -156,4 +161,6 @@ export default function Home() {
       </footer>
     </div>
   );
-}
+};
+
+export default Home;
