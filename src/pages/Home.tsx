@@ -1,5 +1,6 @@
 import React from "react";
 import hmPhoto from "../assets/hm-photo.jpg";
+import NavBar from "./components/NavBar.tsx";
 
 const Home: React.FC = () => {
   return (
@@ -8,9 +9,8 @@ const Home: React.FC = () => {
       <section
         className="hero"
         style={{
-          position: "relative",
+          padding: "150px 20px 50px", // extra top padding for fixed navbar
           textAlign: "center",
-          padding: "100px 20px 50px",
           backgroundColor: "#e0f2fe",
         }}
       >
