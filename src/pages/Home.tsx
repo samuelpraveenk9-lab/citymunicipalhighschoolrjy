@@ -13,23 +13,23 @@ export default function Home() {
           backgroundColor: "#e0f2fe",
         }}
       >
-        <motion.h1
+        <h1
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           style={{ fontSize: "3rem", fontWeight: "bold", color: "#1e3a8a", marginBottom: "20px" }}
         >
           Welcome to CMCH School
-        </motion.h1>
-        <motion.p
+        </h1>
+        <p
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
           style={{ fontSize: "1.25rem", maxWidth: "700px", margin: "0 auto", marginBottom: "30px" }}
         >
           Excellence in Education, Innovation, and Holistic Development.
-        </motion.p>
-        <motion.button
+        </p>
+        <button
           whileHover={{ scale: 1.05 }}
           style={{
             backgroundColor: "#fbbf24",
@@ -42,7 +42,7 @@ export default function Home() {
           }}
         >
           Explore More
-        </motion.button>
+        </button>
       </section>
 
       {/* About Section */}
@@ -91,7 +91,7 @@ export default function Home() {
             { title: "Library", desc: "Extensive collection of books for all grades." },
             { title: "Science Labs", desc: "Well-equipped labs for practical experiments." },
           ].map((f, idx) => (
-            <motion.div
+            <div
               key={idx}
               whileHover={{ scale: 1.05 }}
               style={{
@@ -104,7 +104,7 @@ export default function Home() {
             >
               <h4 style={{ fontWeight: "bold", fontSize: "1.2rem", marginBottom: "10px" }}>{f.title}</h4>
               <p>{f.desc}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </section>
@@ -134,7 +134,7 @@ export default function Home() {
             >
               <h4 style={{ fontWeight: "bold", fontSize: "1.2rem", marginBottom: "10px" }}>Event {e}</h4>
               <p>Details about event {e}...</p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </section>
