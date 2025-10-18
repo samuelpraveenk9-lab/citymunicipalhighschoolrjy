@@ -7,7 +7,6 @@ const Home: React.FC = () => {
     <div>
       {/* Hero Section */}
       <section
-        className="hero"
         style={{
           padding: "150px 20px 50px", // extra top padding for fixed navbar
           textAlign: "center",
