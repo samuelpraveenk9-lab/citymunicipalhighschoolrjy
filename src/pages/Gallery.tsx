@@ -69,4 +69,3 @@ export default function Gallery() {
     </div>
   );
 }
->>>>>>> 3e3e914 (Add new project with Home, Gallery, Events, and assets)
