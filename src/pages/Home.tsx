@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import hmPhoto from "../assets/hm-photo.jpg";
 
 export default function Home() {
