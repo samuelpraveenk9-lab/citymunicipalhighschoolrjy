@@ -11,8 +11,8 @@ export default function Magazine() {
       </p>
 
       <a
-        href="/CMCH Times - Issue 3.pdf"
-        download="CMCH Times - Issue 3.pdf"
+        href="/CMCH Times - Issue 2.pdf"
+        download="CMCH Times - Issue 2.pdf"
         className="bg-blue-700 text-white px-8 py-3 rounded-xl text-lg shadow-md
                    hover:bg-blue-800 transition-all duration-200"
       >
