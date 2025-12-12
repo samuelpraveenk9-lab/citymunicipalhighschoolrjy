@@ -1,0 +1,55 @@
+/* -----------------------------------------
+   CMCH SCHOOL – GLOBAL ROOT STYLES
+   Powered by TailwindCSS
+------------------------------------------ */
+
+/* Tailwind layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth, clean font */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f7fb;
+  color: #1a1a1a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Better scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove link highlight on mobile */
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Make images smoother */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove input outlines but keep accessibility */
+input,
+textarea,
+button {
+  outline: none;
+}
+
+/* Cleaner scrollbars (optional but looks professional) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bfc7d1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ba4b0;
+}
