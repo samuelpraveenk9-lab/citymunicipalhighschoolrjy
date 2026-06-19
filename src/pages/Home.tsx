@@ -1,259 +1,432 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import hmPhoto from "../assets/hm-photo.jpg";
 
 export default function Home() {
-  return (
-    <div>
+const stats = [
+{ number: "1000+", label: "Students" },
+{ number: "40+", label: "Teachers" },
+{ number: "95%", label: "Pass Rate" },
+{ number: "25+", label: "Years of Excellence" },
+];
 
-      {/* Hero Section */}
-      <section
-        style={{
-          background: "linear-gradient(135deg, #dbeafe, #bfdbfe)",
-          padding: "120px 20px",
-          textAlign: "center",
-          borderBottom: "1px solid #cbd5e1",
-        }}
+return ( <div className="bg-slate-50">
+
+```
+  {/* HERO SECTION */}
+  <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-blue-700 to-cyan-600 text-white">
+
+    <div className="absolute inset-0 opacity-10">
+      <div className="absolute top-0 left-0 w-96 h-96 rounded-full bg-white blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-cyan-300 blur-3xl"></div>
+    </div>
+
+    <div className="relative max-w-7xl mx-auto px-6 py-28 text-center">
+
+      <motion.h1
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-5xl md:text-7xl font-extrabold mb-6"
       >
-        <motion.h1
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          style={{
-            fontSize: "3.2rem",
-            fontWeight: 800,
-            color: "#1e3a8a",
-            marginBottom: "20px",
-          }}
+        Welcome to
+        <span className="block text-yellow-300">
+          CMCH School
+        </span>
+      </motion.h1>
+
+      <motion.p
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
+        className="max-w-3xl mx-auto text-lg md:text-xl text-blue-100 mb-10 leading-relaxed"
+      >
+        City Municipal Corporation High School is committed to
+        academic excellence, innovation, character development,
+        and preparing students for a successful future.
+      </motion.p>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.4 }}
+        className="flex flex-wrap justify-center gap-4"
+      >
+        <Link
+          to="/gallery"
+          className="bg-yellow-400 hover:bg-yellow-300 text-blue-900 px-8 py-4 rounded-full font-bold shadow-lg transition"
         >
-          Welcome to CMCH School
-        </motion.h1>
+          View Gallery
+        </Link>
 
-        <motion.p
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          style={{
-            fontSize: "1.25rem",
-            maxWidth: "750px",
-            margin: "0 auto",
-            color: "#1e293b",
-            marginBottom: "30px",
-            lineHeight: "1.7",
-          }}
+        <Link
+          to="/magazine"
+          className="bg-white/20 backdrop-blur-md border border-white/30 hover:bg-white/30 px-8 py-4 rounded-full font-bold transition"
         >
-          City Municipal Corporation High School is committed to excellence in education,
-          innovation, and holistic development.
-        </motion.p>
+          School Magazine
+        </Link>
+      </motion.div>
+    </div>
+  </section>
 
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          style={{
-            backgroundColor: "#fbbf24",
-            color: "#1e40af",
-            border: "none",
-            padding: "14px 28px",
-            borderRadius: "9999px",
-            fontWeight: 700,
-            cursor: "pointer",
-            fontSize: "1rem",
-          }}
+  {/* STATISTICS */}
+  <section className="max-w-7xl mx-auto px-6 -mt-12 relative z-10">
+
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+      {stats.map((stat, index) => (
+        <motion.div
+          key={index}
+          whileHover={{ y: -8 }}
+          className="bg-white rounded-3xl shadow-xl p-8 text-center"
         >
-          Explore More
-        </motion.button>
-      </section>
+          <h3 className="text-4xl font-extrabold text-blue-800">
+            {stat.number}
+          </h3>
 
-      {/* About Section */}
-      <section style={{ padding: "70px 20px", textAlign: "center" }}>
-        <h2 style={{ fontSize: "2.2rem", fontWeight: 700, marginBottom: "20px", color: "#1e3a8a" }}>
-          About CMCH School
-        </h2>
+          <p className="text-slate-600 mt-2">
+            {stat.label}
+          </p>
+        </motion.div>
+      ))}
+    </div>
+  </section>
 
-        <p
-          style={{
-            maxWidth: "850px",
-            margin: "0 auto",
-            fontSize: "1.15rem",
-            color: "#334155",
-            lineHeight: "1.8",
-          }}
-        >
-          City Municipal Corporation High School (CMCH) is dedicated to nurturing young minds
-          with world-class education, modern learning tools, and strong cultural values. Our goal
-          is to empower students with knowledge, creativity, discipline, and holistic growth.
-        </p>
-      </section>
+  {/* ABOUT SECTION */}
+  <section className="max-w-7xl mx-auto px-6 py-24">
 
-      {/* HM Section */}
-      <section style={{ padding: "60px 20px", textAlign: "center" }}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      className="bg-white rounded-3xl shadow-xl p-10 md:p-16"
+    >
+      <h2 className="text-4xl font-bold text-center text-blue-900 mb-8">
+        About CMCH School
+      </h2>
+
+      <p className="max-w-4xl mx-auto text-center text-slate-700 leading-8 text-lg">
+        City Municipal Corporation High School is dedicated to
+        nurturing young minds through quality education,
+        innovative teaching methods, strong values, and
+        holistic development. Our mission is to empower every
+        student with knowledge, creativity, leadership skills,
+        and confidence to thrive in the modern world.
+      </p>
+    </motion.div>
+  </section>
+
+  {/* HEADMASTER SECTION */}
+  <section className="max-w-7xl mx-auto px-6 pb-24">
+
+    <div className="grid md:grid-cols-2 gap-12 items-center">
+
+      <motion.div
+        whileHover={{ scale: 1.02 }}
+        className="flex justify-center"
+      >
         <img
           src={hmPhoto}
-          alt="HM Sir"
-          style={{
-            width: "220px",
-            height: "260px",
-            borderRadius: "12px",
-            objectFit: "cover",
-            marginBottom: "15px",
-            boxShadow: "0 6px 16px rgba(0,0,0,0.25)",
-          }}
+          alt="Headmaster"
+          className="w-80 rounded-3xl shadow-2xl"
         />
-        <h3 style={{ color: "#1e3a8a", fontSize: "1.5rem", fontWeight: 700 }}>
-          P. Durga Prasad Garu – M.Sc, M.Phil, B.Ed
-        </h3>
-        <p style={{ maxWidth: "600px", margin: "15px auto", lineHeight: "1.6", color: "#475569" }}>
-          Our esteemed Head Master, known for his dedication, leadership, and passion for
-          transforming students’ lives.
-        </p>
-      </section>
+      </motion.div>
 
-      {/* Features Section */}
-      <section style={{ padding: "70px 20px", textAlign: "center" }}>
-        <h2 style={{ fontSize: "2.2rem", fontWeight: 700, marginBottom: "40px", color: "#1e3a8a" }}>
-          Our Highlights
-        </h2>
-
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            flexWrap: "wrap",
-            gap: "30px",
-          }}
-        >
-          {[
-            { title: "Smart Classrooms", desc: "Interactive technology-powered learning." },
-            { title: "Library", desc: "A vast collection of books and digital resources." },
-            { title: "Science Labs", desc: "Fully equipped labs for hands-on learning." },
-          ].map((item, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ scale: 1.05 }}
-              style={{
-                background: "#ffffff",
-                width: "260px",
-                padding: "25px",
-                borderRadius: "14px",
-                textAlign: "center",
-                boxShadow: "0 6px 14px rgba(0,0,0,0.12)",
-              }}
-            >
-              <h4 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#1e40af", marginBottom: "10px" }}>
-                {item.title}
-              </h4>
-              <p style={{ color: "#475569", fontSize: "1rem" }}>{item.desc}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
-      {/* Events Section */}
-      <section style={{ padding: "70px 20px", textAlign: "center" }}>
-        <h2 style={{ fontSize: "2.2rem", fontWeight: 700, marginBottom: "40px", color: "#1e3a8a" }}>
-          Upcoming Events
-        </h2>
-
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            flexWrap: "wrap",
-            gap: "30px",
-          }}
-        >
-          {[1, 2, 3].map((e) => (
-            <motion.div
-              key={e}
-              whileHover={{ scale: 1.05 }}
-              style={{
-                background: "#ffffff",
-                width: "260px",
-                padding: "25px",
-                borderRadius: "14px",
-                boxShadow: "0 6px 14px rgba(0,0,0,0.12)",
-              }}
-            >
-              <h4 style={{ fontWeight: 700, color: "#1e40af", fontSize: "1.2rem", marginBottom: "10px" }}>
-                Event {e}
-              </h4>
-              <p style={{ color: "#475569" }}>Details about event {e}...</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section style={{ padding: "70px 20px", textAlign: "center" }}>
-        <h2 style={{ fontSize: "2.2rem", fontWeight: 700, marginBottom: "40px", color: "#1e3a8a" }}>
-          Contact Us
-        </h2>
-
-        <form
-          style={{
-            maxWidth: "500px",
-            margin: "0 auto",
-            display: "flex",
-            flexDirection: "column",
-            gap: "16px",
-          }}
-        >
-          <input
-            type="text"
-            placeholder="Your Name"
-            style={{
-              padding: "12px",
-              borderRadius: "8px",
-              border: "1px solid #cbd5e1",
-            }}
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            style={{
-              padding: "12px",
-              borderRadius: "8px",
-              border: "1px solid #cbd5e1",
-            }}
-          />
-          <textarea
-            placeholder="Message"
-            rows={4}
-            style={{
-              padding: "12px",
-              borderRadius: "8px",
-              border: "1px solid #cbd5e1",
-            }}
-          ></textarea>
-
-          <button
-            type="submit"
-            style={{
-              backgroundColor: "#1e40af",
-              color: "#ffffff",
-              padding: "14px",
-              borderRadius: "9999px",
-              border: "none",
-              fontWeight: 700,
-              cursor: "pointer",
-            }}
-          >
-            Send Message
-          </button>
-        </form>
-      </section>
-
-      {/* Footer */}
-      <footer
-        style={{
-          textAlign: "center",
-          padding: "20px",
-          backgroundColor: "#e0f2fe",
-          marginTop: "50px",
-          fontWeight: 600,
-          color: "#1e40af",
-        }}
+      <motion.div
+        initial={{ opacity: 0, x: 30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
       >
-        © {new Date().getFullYear()} CMCH School. All rights reserved.
-      </footer>
+        <span className="text-blue-700 font-semibold">
+          HEADMASTER
+        </span>
+
+        <h2 className="text-4xl font-bold text-slate-900 mt-2 mb-4">
+          P. Durga Prasad Garu
+        </h2>
+
+        <p className="text-slate-600 mb-6">
+          M.Sc, M.Phil, B.Ed
+        </p>
+
+        <p className="text-slate-700 leading-8">
+          Under his leadership, CMCH School continues to
+          promote academic excellence, discipline, innovation,
+          and student-centered learning. His dedication to
+          education has inspired countless students to pursue
+          their dreams and contribute positively to society.
+        </p>
+      </motion.div>
+
     </div>
-  );
+  </section>
+  
+  {/* HIGHLIGHTS */}
+  <section className="bg-slate-100 py-24">
+    <div className="max-w-7xl mx-auto px-6">
+
+      <h2 className="text-4xl font-bold text-center text-blue-900 mb-14">
+        Our Highlights
+      </h2>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        {[
+          {
+            icon: "💻",
+            title: "Smart Classrooms",
+            desc: "Technology-enabled learning for modern education."
+          },
+          {
+            icon: "📚",
+            title: "Library",
+            desc: "Extensive collection of academic and reference books."
+          },
+          {
+            icon: "🔬",
+            title: "Science Labs",
+            desc: "Hands-on experiments and practical learning."
+          },
+          {
+            icon: "🏆",
+            title: "Sports & Activities",
+            desc: "Encouraging excellence beyond academics."
+          }
+        ].map((item, index) => (
+          <motion.div
+            key={index}
+            whileHover={{ y: -10 }}
+            className="bg-white rounded-3xl p-8 shadow-xl text-center"
+          >
+            <div className="text-5xl mb-5">
+              {item.icon}
+            </div>
+
+            <h3 className="text-xl font-bold text-blue-800 mb-3">
+              {item.title}
+            </h3>
+
+            <p className="text-slate-600">
+              {item.desc}
+            </p>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* EVENTS PREVIEW */}
+  <section className="max-w-7xl mx-auto px-6 py-24">
+
+    <div className="flex justify-between items-center mb-12">
+      <h2 className="text-4xl font-bold text-blue-900">
+        Upcoming Events
+      </h2>
+
+      <Link
+        to="/events"
+        className="text-blue-700 font-semibold hover:underline"
+      >
+        View All →
+      </Link>
+    </div>
+
+    <div className="grid md:grid-cols-3 gap-8">
+
+      {[
+        {
+          title: "Medical Camp",
+          date: "October 2025"
+        },
+        {
+          title: "Children's Day",
+          date: "November 2025"
+        },
+        {
+          title: "Science Fair",
+          date: "December 2025"
+        }
+      ].map((event, index) => (
+        <motion.div
+          key={index}
+          whileHover={{ y: -8 }}
+          className="bg-white rounded-3xl shadow-xl p-8"
+        >
+          <span className="text-blue-700 font-semibold">
+            {event.date}
+          </span>
+
+          <h3 className="text-2xl font-bold mt-3">
+            {event.title}
+          </h3>
+        </motion.div>
+      ))}
+    </div>
+  </section>
+
+  {/* GALLERY PREVIEW */}
+  <section className="bg-slate-100 py-24">
+
+    <div className="max-w-7xl mx-auto px-6">
+
+      <div className="flex justify-between items-center mb-12">
+        <h2 className="text-4xl font-bold text-blue-900">
+          School Gallery
+        </h2>
+
+        <Link
+          to="/gallery"
+          className="text-blue-700 font-semibold hover:underline"
+        >
+          View Gallery →
+        </Link>
+      </div>
+
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+
+        <div className="bg-gradient-to-r from-blue-700 to-cyan-500 rounded-3xl h-56"></div>
+
+        <div className="bg-gradient-to-r from-cyan-500 to-blue-400 rounded-3xl h-56"></div>
+
+        <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-3xl h-56"></div>
+
+        <div className="bg-gradient-to-r from-cyan-400 to-blue-600 rounded-3xl h-56"></div>
+
+      </div>
+    </div>
+  </section>
+
+  {/* MAGAZINE PREVIEW */}
+  <section className="max-w-7xl mx-auto px-6 py-24">
+
+    <h2 className="text-4xl font-bold text-center text-blue-900 mb-14">
+      Latest Magazine
+    </h2>
+
+    <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden">
+
+      <div className="grid md:grid-cols-2">
+
+        <div className="bg-gradient-to-br from-blue-900 via-blue-700 to-cyan-500 min-h-[350px] flex items-center justify-center">
+          <span className="text-white text-3xl font-bold">
+            CMCH Times
+          </span>
+        </div>
+
+        <div className="p-10">
+
+          <span className="text-blue-700 font-semibold">
+            Latest Issue
+          </span>
+
+          <h3 className="text-4xl font-bold mt-3 mb-5">
+            Issue 3
+          </h3>
+
+          <p className="text-slate-600 mb-8">
+            Explore achievements, events, student creativity,
+            school activities, and inspiring stories from
+            CMCH School.
+          </p>
+
+          <Link
+            to="/magazine"
+            className="inline-block bg-blue-700 hover:bg-blue-800 text-white px-8 py-4 rounded-full font-semibold transition"
+          >
+            View Magazine
+          </Link>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* CONTACT CTA */}
+  <section className="bg-gradient-to-r from-blue-900 to-cyan-600 text-white py-24">
+
+    <div className="max-w-4xl mx-auto text-center px-6">
+
+      <h2 className="text-4xl font-bold mb-6">
+        Get In Touch
+      </h2>
+
+      <p className="text-blue-100 mb-8">
+        Have questions about admissions, events, or school activities?
+        Contact us today.
+      </p>
+
+      <button className="bg-yellow-400 hover:bg-yellow-300 text-blue-900 px-8 py-4 rounded-full font-bold transition">
+        Contact School
+      </button>
+
+    </div>
+  </section>
+
+  {/* FOOTER */}
+  <footer className="bg-slate-950 text-white">
+
+    <div className="max-w-7xl mx-auto px-6 py-16">
+
+      <div className="grid md:grid-cols-4 gap-10">
+
+        <div>
+          <h3 className="font-bold text-xl mb-4">
+            CMCH School
+          </h3>
+
+          <p className="text-slate-400">
+            Inspiring excellence through education,
+            innovation, and character development.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="font-bold mb-4">
+            Quick Links
+          </h3>
+
+          <div className="space-y-2 text-slate-400">
+            <p>Home</p>
+            <p>Gallery</p>
+            <p>Events</p>
+            <p>Magazine</p>
+          </div>
+        </div>
+
+        <div>
+          <h3 className="font-bold mb-4">
+            Resources
+          </h3>
+
+          <div className="space-y-2 text-slate-400">
+            <p>School Magazine</p>
+            <p>Photo Gallery</p>
+            <p>Events</p>
+          </div>
+        </div>
+
+        <div>
+          <h3 className="font-bold mb-4">
+            Contact
+          </h3>
+
+          <div className="space-y-2 text-slate-400">
+            <p>CMCH School</p>
+            <p>Andhra Pradesh</p>
+            <p>India</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div className="border-t border-slate-800 mt-12 pt-8 text-center text-slate-500">
+        © {new Date().getFullYear()} CMCH School. All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+
+</div>
+
+);
 }
