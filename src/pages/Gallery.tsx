@@ -57,10 +57,10 @@ export default function Gallery() {
               <img
                 src={photo.src}
                 alt={photo.caption}
-                className="w-full h-52 object-cover transition-transform duration-500 hover:scale-110"
+                className="w-full aspect-[4/3] object-cover transition-transform duration-500 hover:scale-110"
               />
             </div>
-            <p className="text-center text-sm text-gray-700 px-3 py-3 border-t bg-gray-50">
+            <p className="text-center text-sm font-medium text-gray-700 px-4 py-4 bg-white">
               {photo.caption}
             </p>
           </motion.div>
