@@ -2,6 +2,10 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import hmPhoto from "../assets/hm-photo.jpg";
 import issue4cover from "../assets/issue-4-cover.png";
+import SaraswathiPuja from "../assets/Saraswathi-Puja.jpg";
+import GandhijiJayanti from "../assets/Gandhiji-Jayanthi.jpg";
+import TeluguDay from "../assets/Telugu-DAY1.jpg";
+import SSRallyLandscape from "../assets/SS-Rally-Landscape.jpg";
 import Footer from "../components/Footer";
 
 export default function Home() {
@@ -285,15 +289,45 @@ return ( <div className="bg-slate-50">
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
 
-        <div className="bg-gradient-to-r from-blue-700 to-cyan-500 rounded-3xl h-56"></div>
-
-        <div className="bg-gradient-to-r from-cyan-500 to-blue-400 rounded-3xl h-56"></div>
-
-        <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-3xl h-56"></div>
-
-        <div className="bg-gradient-to-r from-cyan-400 to-blue-600 rounded-3xl h-56"></div>
-
+  {[
+    {
+      image: SaraswathiPuja,
+      title: "Saraswathi Puja",
+    },
+    {
+      image: GandhijiJayanti,
+      title: "Gandhiji Jayanthi",
+    },
+    {
+      image: TeluguDay,
+      title: "Telugu Day",
+    },
+    {
+      image: SSRallyLandscape,
+      title: "Swachh Survekshan Rally",
+    },
+  ].map((item, index) => (
+    <div
+      key={index}
+      className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all"
+    >
+      <div className="overflow-hidden">
+        <img
+          src={item.image}
+          alt={item.title}
+          className="w-full h-56 object-cover hover:scale-110 transition-transform duration-500"
+        />
       </div>
+
+      <div className="p-4">
+        <h3 className="font-semibold text-center text-slate-700">
+          {item.title}
+        </h3>
+      </div>
+    </div>
+  ))}
+
+</div>
     </div>
   </section>
 
