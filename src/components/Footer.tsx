@@ -73,7 +73,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="mailto:cmchschool@example.com"
+                href="mailto:durgaprasad1729@gmail.com"
                 className="block hover:text-yellow-300"
               >
                 ✉️ School Email
