@@ -13,7 +13,6 @@ const stats = [
 
 return ( <div className="bg-slate-50">
 
-```
   {/* HERO SECTION */}
   <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-blue-700 to-cyan-600 text-white">
 
