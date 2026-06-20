@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import hmPhoto from "../assets/hm-photo.jpg";
+import issue4cover from "../assets/issue-4-cover.jpg";
 
 export default function Home() {
 const stats = [
@@ -220,7 +221,7 @@ return ( <div className="bg-slate-50">
 
     <div className="flex justify-between items-center mb-12">
       <h2 className="text-4xl font-bold text-blue-900">
-        Upcoming Events
+        Past Events
       </h2>
 
       <Link
@@ -307,12 +308,12 @@ return ( <div className="bg-slate-50">
 
       <div className="grid md:grid-cols-2">
 
-        <div className="bg-gradient-to-br from-blue-900 via-blue-700 to-cyan-500 min-h-[350px] flex items-center justify-center">
-          <span className="text-white text-3xl font-bold">
-            CMCH Times
-          </span>
-        </div>
-
+        <img 
+          src={issue4cover}
+          alt="CMH Times Issue 4"
+          className="w-full h-full object-cover'
+        />
+          
         <div className="p-10">
 
           <span className="text-blue-700 font-semibold">
@@ -320,7 +321,7 @@ return ( <div className="bg-slate-50">
           </span>
 
           <h3 className="text-4xl font-bold mt-3 mb-5">
-            Issue 3
+            Issue 4
           </h3>
 
           <p className="text-slate-600 mb-8">
