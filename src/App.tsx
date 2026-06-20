@@ -6,6 +6,7 @@ import Gallery from "./pages/Gallery";
 import Events from "./pages/Events";
 import Magazine from "./pages/Magazine";
 import Contact from "./pages/Contact";
+import Footer from "./components/Footer";
 
 export default function App() {
   const location = useLocation();
@@ -32,11 +33,7 @@ export default function App() {
       </main>
 
       {/* Footer (Optional) */}
-      <footer className="mt-20 py-6 text-center text-gray-600 text-sm border-t">
-        © {new Date().getFullYear()} City Municipal Corporation High School  
-        <br />
-        All Rights Reserved.
-      </footer>
+      <Footer />
     </div>
   );
 }
