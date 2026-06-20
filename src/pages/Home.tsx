@@ -311,7 +311,7 @@ return ( <div className="bg-slate-50">
         <img 
           src={issue4cover}
           alt="CMH Times Issue 4"
-          className="w-full h-full object-cover'
+          className="w-full h-full object-cover"
         />
           
         <div className="p-10">
