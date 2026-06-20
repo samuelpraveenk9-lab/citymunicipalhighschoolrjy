@@ -363,68 +363,7 @@ return ( <div className="bg-slate-50">
   </section>
 
   {/* FOOTER */}
-  <footer className="bg-slate-950 text-white">
-
-    <div className="max-w-7xl mx-auto px-6 py-16">
-
-      <div className="grid md:grid-cols-4 gap-10">
-
-        <div>
-          <h3 className="font-bold text-xl mb-4">
-            CMCH School
-          </h3>
-
-          <p className="text-slate-400">
-            Inspiring excellence through education,
-            innovation, and character development.
-          </p>
-        </div>
-
-        <div>
-          <h3 className="font-bold mb-4">
-            Quick Links
-          </h3>
-
-          <div className="space-y-2 text-slate-400">
-            <p>Home</p>
-            <p>Gallery</p>
-            <p>Events</p>
-            <p>Magazine</p>
-          </div>
-        </div>
-
-        <div>
-          <h3 className="font-bold mb-4">
-            Resources
-          </h3>
-
-          <div className="space-y-2 text-slate-400">
-            <p>School Magazine</p>
-            <p>Photo Gallery</p>
-            <p>Events</p>
-          </div>
-        </div>
-
-        <div>
-          <h3 className="font-bold mb-4">
-            Contact
-          </h3>
-
-          <div className="space-y-2 text-slate-400">
-            <p>CMCH School</p>
-            <p>Andhra Pradesh</p>
-            <p>India</p>
-          </div>
-        </div>
-
-      </div>
-
-      <div className="border-t border-slate-800 mt-12 pt-8 text-center text-slate-500">
-        © {new Date().getFullYear()} CMCH School. All rights reserved.
-      </div>
-
-    </div>
-  </footer>
+  <Footer />
 
 </div>
 
