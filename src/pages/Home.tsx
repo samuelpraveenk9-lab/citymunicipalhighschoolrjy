@@ -11,7 +11,7 @@ import Footer from "../components/Footer";
 export default function Home() {
 const stats = [
 { number: "1000+", label: "Students" },
-{ number: "40+", label: "Teachers" },
+{ number: "30+", label: "Teachers" },
 { number: "95%", label: "Pass Rate" },
 { number: "25+", label: "Years of Excellence" },
 ];
@@ -398,7 +398,6 @@ return ( <div className="bg-slate-50">
   </section>
 
   {/* FOOTER */}
-  <Footer />
 
 </div>
 
