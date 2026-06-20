@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 
-import issue1Cover from "../assets/issue-1-cover.jpg";
-import issue2Cover from "../assets/issue-2-cover.jpg";
-import issue3Cover from "../assets/issue-3-cover.jpg";
-import issue4Cover from "../assets/issue-4-cover.jpg";
+import issue1Cover from "../assets/issue-1-cover.png";
+import issue2Cover from "../assets/issue-2-cover.png";
+import issue3Cover from "../assets/issue-3-cover.png";
+import issue4Cover from "../assets/issue-4-cover.png";
 
 export default function Magazine() {
   const issues = [
