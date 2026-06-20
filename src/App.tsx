@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Gallery from "./pages/Gallery";
 import Events from "./pages/Events";
 import Magazine from "./pages/Magazine";
+import Contact from "./pages/Contact";
 
 export default function App() {
   const location = useLocation();
@@ -26,6 +27,7 @@ export default function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/events" element={<Events />} />
           <Route path="/magazine" element={<Magazine />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
 
