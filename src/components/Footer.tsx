@@ -66,7 +66,7 @@ export default function Footer() {
               </p>
 
               <a
-                href="tel:+91XXXXXXXXXX"
+                href="tel:+919397951399"
                 className="block hover:text-yellow-300"
               >
                 📞 School Phone
