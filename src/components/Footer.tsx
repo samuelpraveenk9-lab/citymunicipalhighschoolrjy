@@ -69,14 +69,14 @@ export default function Footer() {
                 href="tel:+919397951399"
                 className="block hover:text-yellow-300"
               >
-                📞 School Phone
+                📞 Phone: +91 93979 51399
               </a>
 
               <a
                 href="mailto:durgaprasad1729@gmail.com"
                 className="block hover:text-yellow-300"
               >
-                ✉️ School Email
+                ✉️ Email: durgaprasad1729@gmail.com
               </a>
 
             </div>
