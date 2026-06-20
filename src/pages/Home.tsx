@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import hmPhoto from "../assets/hm-photo.jpg";
 import issue4cover from "../assets/issue-4-cover.png";
-import Footer from "./components/Footer";
+import Footer from "../components/Footer";
 
 export default function Home() {
 const stats = [
